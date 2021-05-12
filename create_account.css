@@ -1,3 +1,5 @@
+@import url(./loader.css);
+
 :root {
   --width: 1150px;
   --color-primary: #fd6619;
@@ -68,7 +70,7 @@ section {
   font-size: 14px;
   padding: 7px 30px;
   border-radius: 20px;
-  color: #80858a83;
+  color: var(--color-primary);
   font-weight: 500;
   border: 1px solid #80858a83;
 }
@@ -109,6 +111,7 @@ section {
 
 #membership {
   align-items: center;
+  margin: 20px 0;
 }
 
 #membership input {
@@ -145,6 +148,51 @@ section {
 	position: relative;
 	top: -1px;
 	*overflow: hidden;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
+#backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.712);
+  z-index: 200;
+  display: none;
+}
+
+#confirmation-modal {
+  background-color: #28333d;
+  position: fixed;
+  width: 400px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  z-index: 300;
+  display: none;
+}
+
+#confirmation-modal > img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+  cursor: pointer;
+}
+
+#confirmation-modal > h3 {
+  font-size: 22px;
 }
 
 

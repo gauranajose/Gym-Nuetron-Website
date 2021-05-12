@@ -1,4 +1,6 @@
 const createBtn = document.getElementById('create-btn');
+const closeModalBtn = document.getElementById('close-btn');
+let isCreated = false;
 console.log(createBtn);
 
 function sendHttpRequest(method, url, data) {
@@ -8,9 +10,10 @@ function sendHttpRequest(method, url, data) {
   }).then(response => {
     return response.json();
   })
-}
+} 
 
-const createPost = () => {
+const createPost = async () => {
+  openModal();
   const firstName = document.getElementById('firstName').value;
   const lastName = document.getElementById('lastName').value;
   const contactNum = document.getElementById('contact_number').value;
@@ -33,8 +36,46 @@ const createPost = () => {
     membership: membership,
   };
 
-  sendHttpRequest('POST', 'https://project-website-php.000webhostapp.com/api/create_member.php', post);
+  const responseData = await sendHttpRequest('POST', 'https://project-website-php.000webhostapp.com/api/create_member.php', post);
+  console.log(responseData);
+  showResult(responseData);
 };
+
+const hideModal = () => {
+  if (isCreated) {
+    location.href = 'login.html';
+  }
+  else {
+    document.getElementById('confirmation-modal').style.display = 'none';
+    document.getElementById('backdrop').style.display = 'none';
+    location.reload();
+    return false;
+  }
+}
+
+const openModal = () => {
+  document.getElementById('confirmation-modal').style.display = 'flex';
+  document.getElementById('backdrop').style.display = 'block';
+}
+
+const showResult = (responseData) => {
+  const element = document.querySelector('#confirmation-modal h3');
+  if (responseData.message.localeCompare('Member Created!') === 0) {
+    element.innerHTML = `Account Succesfully Created!`;
+    element.style.color = '#019B67';
+    isCreated = true;
+  }
+  else {
+    element.innerHTML = `Failed to Create an Account!`;
+    element.style.color = '#cf2c2c';
+  }
+  closeModalBtn.style.display = 'block';
+  document.querySelector('#confirmation-modal .loader').style.display = 'none';
+  console.log(document.querySelector('#confirmation-modal .loader'));
+  document.getElementById('confirmation-modal').insertAdjacentElement('beforeend', element);
+}
+
+closeModalBtn.addEventListener('click', hideModal);
 
 createBtn.addEventListener('click', (event) => {
   event.preventDefault();

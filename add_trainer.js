@@ -1,5 +1,7 @@
 const addBtn = document.getElementById('add-btn');
 const closeModalBtn = document.getElementById('close-btn');
+const logoutBtn = document.getElementById('logout-btn');
+
 console.log(addBtn);
 
 function sendHttpRequest(method, url, data) {
@@ -61,3 +63,9 @@ addBtn.addEventListener('click', async (event) => {
 });
 
 closeModalBtn.addEventListener('click', hideModal);
+
+logoutBtn.addEventListener('click', () => {
+  localStorage.removeItem('user');
+  location.href = 'index.html';
+});
+

@@ -1,6 +1,6 @@
-const submitBtn = document.getElementById('submit-btn');
+const memberId = localStorage.getItem('memberID');
 const logoutBtn = document.getElementById('logout-btn');
-console.log(submitBtn);
+console.log(memberId);
 
 const sendHttpRequest = (method, url, data) => {
   return fetch(url, {
@@ -13,7 +13,6 @@ const sendHttpRequest = (method, url, data) => {
 
 const fetchMember = async () => {
   document.querySelector('.loader').style.display = 'flex';
-  const memberId = document.getElementById('input_id').value;
   const data = {
     memberID: memberId,
   };
@@ -22,8 +21,8 @@ const fetchMember = async () => {
     'https://project-website-php.000webhostapp.com/api/load_member.php',
     data
   );
-  console.log(responseData);
   updateUI(responseData);
+  console.log('hello');
 };
 
 const updateUI = (responseData) => {
@@ -80,19 +79,33 @@ const updateUI = (responseData) => {
           <p>${memEnd[0]}</p>
         </div>
       </div>
+      <div class="profile-group full">
+          <h4>Trainers</h4>
+          <ul id="trainers"></ul>
+        </div>
     </div>
   `;
+
+  const trainersEl = memberDetails.trainers.map((trainer) => {
+    const el = document.createElement('p');
+    el.innerHTML = `tn# ${trainer}`;
+    return el;
+  });
+
+  console.log(trainersEl);
+
   document
-    .getElementById('input-body')
+    .getElementById('profile-header')
     .insertAdjacentElement('afterend', element);
+
+  for(trainer of trainersEl) {
+    document.getElementById('trainers').insertAdjacentElement('beforeend', trainer);
+  }
 };
 
-submitBtn.addEventListener('click', (event) => {
-  event.preventDefault();
-  fetchMember();
-});
-
 logoutBtn.addEventListener('click', () => {
-  localStorage.removeItem('user');
+  localStorage.removeItem('memberID');
   location.href = 'index.html';
-});
+})
+
+fetchMember();

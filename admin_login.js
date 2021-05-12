@@ -11,7 +11,7 @@ const sendHttpRequest = (method, url, data) => {
 };
 
 const createPost = async () => {
-  // openModal();
+  openModal();
   const post = {
     email: document.getElementById('username').value,
     password: document.getElementById('password').value, 
@@ -24,7 +24,37 @@ const createPost = async () => {
     'https://project-website-php.000webhostapp.com/api/check_login.php',
     post
   );
-  console.log(responseData.message);
+  showResult(responseData);
 };
+
+const hideModal = () => {
+  document.getElementById('confirmation-modal').style.display = 'none';
+  document.getElementById('backdrop').style.display = 'none';
+  location.reload();
+  return false;
+}
+
+const openModal = () => {
+  document.getElementById('confirmation-modal').style.display = 'flex';
+  document.getElementById('backdrop').style.display = 'block';
+}
+
+const showResult = (responseData) => {
+  if (responseData.user) {
+    localStorage.setItem('user', responseData.uer);
+    location.href = 'view_all_members.html';
+  }
+  else {
+    const element = document.createElement('h3');
+    element.innerHTML = 'Account not valid!';
+    element.style.color = '#cf2c2c';
+    closeModalBtn.style.display = 'block';
+    document.querySelector('#confirmation-modal .loader').style.display = 'none';
+    console.log(document.querySelector('#confirmation-modal .loader'));
+    document.getElementById('confirmation-modal').insertAdjacentElement('beforeend', element);
+  }
+}
+
+closeModalBtn.addEventListener('click', hideModal);
 
 loginBtn.addEventListener('click', createPost);

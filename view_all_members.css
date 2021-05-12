@@ -22,6 +22,20 @@ a {
   color: inherit;
 }
 
+.button {
+  background: var(--color-primary);
+  border-radius: 5px;
+  font-weight: 700;
+  color: var(--color-background);
+  padding: 10px 15px;
+  width: fit-content;
+  cursor: pointer;
+  position: absolute;
+  width: 173px;
+  bottom: 20px;
+  text-align: center;
+}
+
 body {
   display: flex;
   flex-direction: row;

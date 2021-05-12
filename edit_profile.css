@@ -146,6 +146,7 @@ header ul li {
   height: 300px;
   width: var(--width);
   margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 #PW-left {

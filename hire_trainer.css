@@ -107,6 +107,7 @@ header ul li {
   display: flex;
   flex-direction: column;
   margin-top: 150px !important;
+  margin-bottom: 50px;
 }
 
 #trainer-header {

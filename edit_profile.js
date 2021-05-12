@@ -18,7 +18,7 @@ const fetchDetails = async () => {
   const data = {
     memberID: memberId,
   };
-  const responseData = await sendHttpRequest(
+  const responseData = await sendHttpRequest( 
     'POST',
     'https://project-website-php.000webhostapp.com/api/load_member.php',
     data
@@ -71,13 +71,14 @@ updateDetailsBtn.addEventListener('click', async (event) => {
   openModal();
   event.preventDefault();
   const data = {
-    oldEmail: document.getElementById('email').value,
+    oldEmail: userDetails.email,
     firstName: document.getElementById('firstName').value,
     lastName: document.getElementById('lastName').value,
     mobileNum: document.getElementById('contact_number').value,
     Email: document.getElementById('email').value,
     password: userDetails.password,
   };
+  console.log(data);
   const responseData = await sendHttpRequest(
     'POST',
     'https://project-website-php.000webhostapp.com/api/edit_member.php',
@@ -119,5 +120,5 @@ logoutBtn.addEventListener('click', () => {
   localStorage.removeItem('memberID');
   location.href = 'index.html';
 })
-
+ 
 fetchDetails();

@@ -67,29 +67,30 @@ const hideModal = () => {
   document.getElementById('backdrop').style.display = 'none';
   location.reload();
   return false;
-}
+};
 
 const openModal = () => {
   document.getElementById('confirmation-modal').style.display = 'flex';
   document.getElementById('backdrop').style.display = 'block';
-}
+};
 
 const showResult = (responseData) => {
   const element = document.createElement('h3');
   if (responseData.message.localeCompare('Trainer Hired') === 0) {
     element.innerHTML = 'Succesfully Hired Trainer!';
     element.style.color = '#019B67';
-  }
-  else {
+  } else {
     element.innerHTML = 'Failed to Hire Trainer!';
     element.style.color = '#cf2c2c';
   }
   closeModalBtn.style.display = 'block';
   document.querySelector('#confirmation-modal .loader').style.display = 'none';
   console.log(document.querySelector('#confirmation-modal .loader'));
-  document.getElementById('confirmation-modal').insertAdjacentElement('beforeend', element);
+  document
+    .getElementById('confirmation-modal')
+    .insertAdjacentElement('beforeend', element);
   console.log(responseData);
-}
+};
 
 hireBtn.addEventListener('click', async (event) => {
   event.preventDefault();
@@ -117,7 +118,7 @@ closeModalBtn.addEventListener('click', hideModal);
 logoutBtn.addEventListener('click', () => {
   localStorage.removeItem('memberID');
   location.href = 'index.html';
-})
+});
 
 fetchDetails().then(() => {
   fetchTrainers();

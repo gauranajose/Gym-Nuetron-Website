@@ -1,4 +1,5 @@
 const filterBtn = document.getElementById('filter-btn');
+const logoutBtn = document.getElementById('logout-btn');
 console.log(filterBtn);
 
 function sendHttpRequest(method, url, data) {
@@ -67,3 +68,8 @@ filterBtn.addEventListener('click', (event) => {
   event.preventDefault();
   fetchTransactions();
 });
+
+logoutBtn.addEventListener('click', () => {
+  localStorage.removeItem('user');
+  location.href = 'index.html';
+})
