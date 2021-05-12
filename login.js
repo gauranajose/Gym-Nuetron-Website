@@ -40,7 +40,7 @@ const openModal = () => {
 const showResult = (responseData) => {
   if (responseData.memberID) {
     localStorage.setItem('memberID', responseData.memberID);
-    location.href = 'edit_profile.html';
+    location.href = 'member_profile.html';
   }
   else {
     const element = document.createElement('h3');
