@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="add_trainer.css">
+  <script src="./add_trainer.js" defer></script>
+</head>
+<body>
+  <section id="navigation">
+    <h1 id="logo">gym nuetron</h1>
+    <nav>
+      <ul>
+        <li><a href="view_all_members.html"><img src="./images/icon-persons.svg" />All Members</a></li>
+        <li><a href="view_member_details.html"><img src="./images/icon-profile.svg" />Member Details</a></li>
+        <li><a href="transaction_summary.html"><img src="./images/icon-cash.svg" />Transaction Summary</a></li>
+        <li><a href="#"  class="active"><img src="./images/icon-persons.svg" />Add Trainers</a></li>
+      </ul>
+    </nav> 
+  </section>
+  <section id="add-trainer">
+    <div id="heading">
+      <h2>Add a Trainer</h2>
+      <p>Complete the form below to add another trainer to the gym.</p>
+    </div>
+    <form>
+      <div class="row">
+        <div class="form-group">
+          <label for="firstName"><h4>First Name</h4></label>
+          <input type="text" name="firstName" id="firstName">
+        </div>
+        <div class="form-group">
+          <label for="lastName"><h4>Last Name</h4></label>
+          <input type="text" name="lastName" id="lastName">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="mobileNum"><h4>Mobile Number</h4></label>
+          <input type="text" name="mobileNum" id="mobileNum">
+        </div>
+        <div class="form-group">
+          <label for="email"><h4>Email</h4></label>
+          <input type="email" name="email" id="email">
+        </div>
+      </div>
+      <div class="form-group">
+				<label for="schedule"><h4>Schedule</h4></label>
+				<input type="radio" name="schedule" value="MWF" id="MWF"> MWF
+        <input type="radio" name="schedule" value="TTHS" id="TTHS"> TTHS
+        <input type="radio" name="schedule" value="Weekends" id="Weekends"> Weekends
+			</div>
+      <input type="submit" class="button" value="Add Trainer" id="add-btn">
+    </form>
+  </section>
+  <div id="backdrop"></div>
+  <div id="confirmation-modal">
+    <div class="loader">
+      <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+      </div>
+    </div>
+    <img src="./images/icon-close.svg" alt="" id="close-btn">
+    <!-- <h3>Succesfully Hired Trainer!</h3> -->
+  </div>
+</body>
+</html>

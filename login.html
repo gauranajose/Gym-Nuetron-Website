@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="login.js" defer></script>
+  <title>Document</title>
+</head>
+<body>
+  <section>
+    <div id="image">
+      <img src="./images/spencer-davis-0ShTs8iPY28-unsplash.jpg" alt="">
+    </div>
+    <div id="login">
+      <h1>gym</h1>
+      <h3>Login</h3>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <hr>
+      <form action="">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password">
+        </div>
+        <p>Forget Password?</p>
+        <input type="submit" value="Login" id="login-btn">
+      </form>
+      <p>Not registered yet? <span><a href="./create_account.html">Create Account</a></span></p>
+    </div>
+  </section>
+  <div id="backdrop"></div>
+  <div id="confirmation-modal">
+    <div class="loader">
+      <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+      </div>
+    </div>
+    <img src="./images/icon-close.svg" alt="" id="close-btn">
+    <!-- <h3>Succesfully Hired Trainer!</h3> -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="edit_profile.css">
+  <script src="edit_profile.js" defer></script>
+</head>
+<body> 
+  <header>
+    <h1>edit profile</h1> 
+    <ul>
+      <li><a href="#">Edit Profile</a></li>
+      <li><a href="./extnd._memb..html">Extend Membership</a></li>
+      <li><a href="./hire_trainer.html">Hire Trainer</a></li>
+    </ul>
+    <div id="sign-in-nav">
+      <div class="button" id="logout-btn"><a href="#">Logout</a></div>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div id="hero-left">
+      <h2>Personal Information</h2>
+      <p>This information is private and will not be shared and will be kept confidential.</p>
+    </div>
+    <div id="hero-right">
+      <div id="change_pw">
+	
+		  <form action="">
+			<div class="form-group">
+			  <label for="firstName"><h4>First Name</h4></label>
+			  <input type="text" name="firstName" id="firstName">
+			</div>
+      <div class="form-group">
+			  <label for="lastName"><h4>Last Name</h4></label>
+			  <input type="text" name="lastName" id="lastName">
+			</div>
+			<div class="form-group">
+			  <label for="email"><h4>Email</h4></label>
+			  <input type="text" name="email" id="email">
+			</div>
+			<div class="form-group">
+			  <label for="contact_number"><h4>Contact Number</h4></label>
+			  <input type="number" name="contact_number" id="contact_number">
+			</div>
+			<input type="submit" value="Update Details" id="update-details-btn">
+		  </form>
+      </div>
+    </div>
+  </section>
+  
+  <section id="PW">
+	<div id="PW-left">
+		<h2>Change Password</h2>
+		<p>We recommend that you periodically update your password to help prevent unauthorized access to your account.</p>
+	</div>
+	<div id="PW-right">
+	  <div id="change_pw">
+		  <form action="">
+			<div class="form-group">
+				<label for="password"><h4>Current Password</h4></label>
+				<input type="password" name="password" id="password">
+			</div>
+			<div class="form-group">
+				<label for="newpassword"><h4>New Password</h4></label>
+				<input type="password" name="newpassword" id="newpassword">
+			</div>
+			<div class="form-group">
+				<label for="renewpassword"><h4>Re-enter New Password</h4></label>
+				<input type="password" name="renewpassword" id="renewpassword">
+			</div>
+			<input type="submit" value="Change Password" id="update-pass-btn">
+		  </form>
+	  </div>
+	</div>
+	</section>
+
+  <div id="backdrop"></div>
+  <div id="confirmation-modal">
+    <div class="loader">
+      <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+      </div>
+    </div>
+    <img src="./images/icon-close.svg" alt="" id="close-btn">
+    <h3></h3>
+  </div>
+</body>
+</html>

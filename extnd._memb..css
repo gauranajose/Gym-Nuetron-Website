@@ -1,0 +1,212 @@
+@import url(./loader.css);
+
+:root {
+  --width: 1150px;
+  --color-primary: #fd6619;
+  --color-background: #1e252b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button {
+  background: var(--color-primary);
+  border-radius: 5px;
+  font-weight: 700;
+  color: var(--color-background);
+  padding: 10px 15px;
+  width: fit-content;
+}
+
+.button-trans {
+  border: var(--color-primary) 2px solid;
+  background: transparent;
+  color: #fff;
+}
+
+.button-big {
+  font-size: 20px;
+  padding: 15px 30px;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+h4 {
+  color: rgb(216, 202, 202);
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-background);
+  color: #fff;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 40px;
+  background-color: var(--color-background);
+  z-index: 100;
+  position: fixed;
+}
+
+header h1 {
+  color: var(--color-primary);
+  font-weight: 900;
+  font-size: 32px;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+}
+
+header ul li {
+  margin: 0 10px;
+  padding: 10px 15px;
+}
+
+#pricing {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+#pricing > h2 {
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 3px;
+  width: 70%;
+  background: linear-gradient(#fff, #ff9c6b);
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+#pricing > p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ff9c6b;
+  margin-bottom: 50px;
+}
+
+#pricing-container {
+  display: flex;
+  width: var(--width);
+  margin-top: 50px;
+}
+
+#pricing-container > div {
+  background-color: #272F36;
+  border-radius: 10px;
+  padding: 40px 20px;
+  margin: 0 5px;
+}
+
+#pricing-container > div h4 {
+  font-size: 20px;
+}
+
+#pricing-container > div h3 {
+  font-size: 32px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#pricing-container > div ul li {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #55555c;
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+#pricing-container > div ul li img {
+  margin-right: 10px;
+}
+
+#pricing-container > div ul {
+  margin-bottom: 100px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column .button {
+  align-self: center;
+  width: 100%;
+  text-align: center;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
+#backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.712);
+  z-index: 200;
+  display: none;
+}
+
+#confirmation-modal {
+  background-color: #28333d;
+  position: fixed;
+  width: 400px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  z-index: 300;
+  display: none;
+}
+
+#confirmation-modal > img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+
+#confirmation-modal > h3 {
+  font-size: 22px;
+  text-align: center;
+}

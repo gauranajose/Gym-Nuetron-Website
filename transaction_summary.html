@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="transaction_summary.css">
+  <script src="./transaction_summary.js" defer></script>
+</head>
+<body>
+  <section id="navigation">
+    <h1 id="logo">gym nuetron</h1>
+    <nav>
+      <ul>
+        <li><a href="view_all_members.html"><img src="./images/icon-persons.svg" />All Members</a></li>
+        <li><a href="view_member_details.html"><img src="./images/icon-profile.svg" />Member Details</a></li>
+        <li><a href="#" class="active"><img src="./images/icon-cash.svg" />Transaction Summary</a></li>
+        <li><a href="add_trainer.html"><img src="./images/icon-persons.svg" />Add Trainers</a></li>
+      </ul>
+    </nav>
+  </section>
+  <section id="all-members">
+    <div id="header">
+      <h2>Transaction Summary</h2>
+      <p>View and filter gym transactions</p>
+    </div>
+    <div id="date-filter">
+      <form action="">
+        <div class="form-group">
+          <label for="from"><h4>From</h4></label>
+          <input type="date" name="from" id="from">
+        </div>
+        <div class="form-group">
+          <label for="to"><h4>To</h4></label>
+          <input type="date" name="to" id="to">
+        </div>
+        <input type="submit" class="button button-trans" value="Filter" id="filter-btn">
+      </form>
+    </div>
+    <div id="members-table">
+      <div id="table-header">
+        <p>Transaction ID</p>
+        <p>Member ID</p>
+        <p>Amount</p>
+        <p>Time</p>
+        <p>Date</p>
+      </div>
+      <div id="table-body">
+        <!-- <div class="row">
+          <p>10001</p>
+          <p>20001</p>
+          <p>P1,200.00</p>
+          <p>5:00 P.M.</p>
+          <p>May 13, 2021</p>
+        </div> -->
+      </div>
+    </div>
+    <div class="loader">
+      <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
