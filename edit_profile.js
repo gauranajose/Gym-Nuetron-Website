@@ -1,3 +1,4 @@
+if (!localStorage.getItem('memberID')) location.href = 'login.html';
 const memberId = localStorage.getItem('memberID');
 const updateDetailsBtn = document.getElementById('update-details-btn');
 const updatePassBtn = document.getElementById('update-pass-btn');

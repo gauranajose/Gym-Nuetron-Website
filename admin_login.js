@@ -41,7 +41,7 @@ const openModal = () => {
 
 const showResult = (responseData) => {
   if (responseData.user) {
-    localStorage.setItem('user', responseData.uer);
+    localStorage.setItem('user', responseData.user);
     location.href = 'view_all_members.html';
   }
   else {

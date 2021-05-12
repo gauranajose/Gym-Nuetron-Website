@@ -1,3 +1,4 @@
+if (!localStorage.getItem('memberID')) location.href = 'login.html';
 const memberId = localStorage.getItem('memberID');
 const logoutBtn = document.getElementById('logout-btn');
 console.log(memberId);

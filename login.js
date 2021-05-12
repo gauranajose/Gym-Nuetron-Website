@@ -32,7 +32,7 @@ const hideModal = () => {
   return false;
 }
 
-const openModal = () => {
+const openModal = () => { 
   document.getElementById('confirmation-modal').style.display = 'flex';
   document.getElementById('backdrop').style.display = 'block';
 }

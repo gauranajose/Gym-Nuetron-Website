@@ -1,3 +1,4 @@
+if (!localStorage.getItem('user')) location.href = 'admin_login.html';
 const addBtn = document.getElementById('add-btn');
 const closeModalBtn = document.getElementById('close-btn');
 const logoutBtn = document.getElementById('logout-btn');

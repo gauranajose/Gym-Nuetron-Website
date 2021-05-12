@@ -158,6 +158,7 @@ header ul li {
 .column {
   display: flex;
   flex-direction: column;
+  width: 380px;
 }
 
 .column .button {

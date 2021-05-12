@@ -1,3 +1,4 @@
+if (!localStorage.getItem('user')) location.href = 'admin_login.html';
 const filterBtn = document.getElementById('filter-btn');
 const logoutBtn = document.getElementById('logout-btn');
 console.log(filterBtn);

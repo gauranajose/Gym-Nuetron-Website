@@ -1,3 +1,4 @@
+if (!localStorage.getItem('user')) location.href = 'admin_login.html';
 const logoutBtn = document.getElementById('logout-btn');
 
 const sendHttpRequest = (method, url, data) => {
