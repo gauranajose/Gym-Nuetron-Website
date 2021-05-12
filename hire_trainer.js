@@ -116,7 +116,7 @@ closeModalBtn.addEventListener('click', hideModal);
 
 logoutBtn.addEventListener('click', () => {
   localStorage.removeItem('memberID');
-  location.href = 'home.html';
+  location.href = 'index.html';
 })
 
 fetchDetails().then(() => {

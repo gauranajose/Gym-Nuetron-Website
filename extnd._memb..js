@@ -88,7 +88,7 @@ annuallyBtn.addEventListener('click', async () => {
 
 logoutBtn.addEventListener('click', () => {
   localStorage.removeItem('memberID');
-  location.href = 'home.html';
+  location.href = 'index.html';
 })
 
 closeModalBtn.addEventListener('click', hideModal);
