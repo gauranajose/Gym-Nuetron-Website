@@ -1,0 +1,225 @@
+@import url(../../utilities/loader.css);
+
+:root {
+  --width: 1150px;
+  --color-primary: #fd6619;
+  --color-background: #1E252B;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-background);
+  color: #FFF;
+  width: 100%;
+}
+
+#navigation {
+  padding: 30px;
+  height: 100vh;
+  background-color: #28333d;
+  width: 233px;
+  position: fixed;
+}
+
+#navigation ul {
+  text-align: center;
+}
+
+#navigation ul li {
+  margin: 10px 0;
+}
+
+#navigation ul li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+#navigation ul li a.active {
+  background-color: #fd6619;
+  border-radius: 5px;
+}
+
+#navigation ul li a img {
+  margin-right: 5px;
+}
+
+#logo {
+  color: var(--color-primary);
+  font-weight: 900;
+  font-size: 32px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.button {
+  background: var(--color-primary);
+  border-radius: 5px;
+  font-weight: 700;
+  color: var(--color-background);
+  padding: 10px 15px;
+  width: fit-content;
+}
+
+.button-trans {
+  border: var(--color-primary) 2px solid;
+  background: transparent;
+  color: #FFF;
+}
+
+.button-big {
+  font-size: 20px;
+  padding: 15px 30px;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+#inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+  width: 100%;
+  margin-left: 233px; 
+}
+
+#input-head {
+  margin-left: auto;
+  margin-right:auto;
+  text-align:center;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+#input-head p {
+
+  margin-left: auto;
+  margin-right:auto;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ff9c6b;
+}
+
+#input-head h2 {
+	
+  margin-left: auto;
+  margin-right:auto;
+  font-size: 30px;
+  letter-spacing: 3px;
+  background: linear-gradient(#fff, #ff9c6b);
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+#input-head .button {
+  align-items: center;
+}
+
+#input_f form .form-group input {
+  font-size: 14px;
+  padding: 7px 30px;
+  border-radius: 20px;
+  color: black;
+  font-weight: 500;
+  border: 1px solid #80858a83;
+  text-align: center;
+}
+
+#inputs form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+#inputs form .form-group label {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: white;
+}
+
+
+#input_f form input[type="submit"] {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 30px;
+  border-radius: 20px;
+  color: #FFF;
+  width: 100%;
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  margin-bottom: 20px;
+}
+
+#member-details {
+  margin-top: 40px;
+}
+
+.row {
+  display: flex;
+}
+
+.profile-group {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+.profile-group > h4 {
+  margin-bottom: 10px;
+}
+ 
+.profile-group > p {
+  background-color: #28333d;
+  width: 80%;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 5px;
+  color: var(--color-primary);
+}
+
+.loader {
+  display: none;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+#logout-btn {
+  background: var(--color-primary);
+  border-radius: 5px;
+  font-weight: 700;
+  color: var(--color-background);
+  padding: 10px 15px;
+  width: fit-content;
+  cursor: pointer;
+  position: absolute;
+  width: 173px;
+  bottom: 20px;
+  text-align: center;
+}

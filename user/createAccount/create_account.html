@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="create_account.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="create_account.js" defer></script>
+  <title>Gym Neutron | Create Account</title>
+</head>
+<body>
+  <section>
+    <div id="create_account">
+      <h1>gym neutron</h1>
+      <h3>Create Account</h3>
+      <hr>
+      <form action="">
+        <div class="row">
+          <div class="form-group">
+            <label for="firsName">First Name</label>
+            <input type="text" name="firstName" id="firstName">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName">
+          </div>
+        </div>
+		    <div class="form-group">
+          <label for="contact_number">Contact Number</label>
+          <input type="number" name="contact_number" id="contact_number">
+		    </div>
+        <div class="row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+          </div>
+          <div class="column">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password">
+            </div>
+            <div class="form-group">
+              <label for="repassword">Re-enter Password</label>
+              <input type="password" name="repassword" id="repassword">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="membership">Membership</label>
+          <div id="membership" class="row">
+            <input type="radio" name="membership" id="weekly" value="Weekly"> <h4 class="text-primary">Weekly</h4>
+            <input type="radio" name="membership" id="monthly" value="Monthly"> <h4 class="text-primary">Monthly</h4>
+            <input type="radio" name="membership" id="annually" value="Annually"> <h4 class="text-primary">Annually</h4>
+          </div>
+        </div>
+        <input type="checkbox" id="agree_terms" name="agree_terms" value="compliant" class="terms_checkbox">
+        <label for="agree_terms" class="terms_font"> I agree to the <a href="#" onClick="MyWindow=window.open('https://www.termsofservicegenerator.net/live.php?token=ACG8GTi7SSgOexzfx54kL31Wm3QJoPrb','MyWindow','width=600,height=600'); return false;">Terms of Service and Privacy Policy</a></label>
+        <br>
+        <br>
+        <input type="submit" value="Create Account" id="create-btn">
+      </form>
+    </div>
+  </section>
+  <div id="backdrop"></div>
+  <div id="confirmation-modal">
+    <div class="loader">
+      <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+      </div>
+    </div>
+    <img src="../../images/icon-close.svg" alt="" id="close-btn">
+    <h3></h3>
+    <!-- <h3>Succesfully Hired Trainer!</h3> -->
+  </div>
+</body>
+</html>

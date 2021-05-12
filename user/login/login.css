@@ -1,0 +1,153 @@
+@import url(../../utilities/loader.css);
+
+:root {
+  --width: 1150px;
+  --color-primary: #fd6619;
+  --color-background: #1e252b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background);
+  min-height: 100vh;
+}
+
+section {
+  display: flex;
+  width: 800px;
+  height: 500px;
+}
+
+section img {
+  height: 500px;
+}
+
+#login {
+  width: 100%;
+  background-color: #FFF;
+  padding: 40px 60px;
+}
+
+#login h1 {
+  color: var(--color-primary);
+  font-weight: 900;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+#login h3 {
+  font-size: 28px;
+}
+
+#login p {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+#login form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+#login form .form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: var(--color-background);
+}
+
+#login form .form-group input {
+  font-size: 14px;
+  padding: 7px 30px;
+  border-radius: 20px;
+  color: var(--color-primary);
+  font-weight: 500;
+  border: 1px solid #80858a83;
+}
+
+#login form .form-group input:focus {
+  outline: none;
+}
+
+#login form p {
+  font-weight: 700;
+  color: var(--color-background); 
+  text-align: right;
+}
+
+#login form input[type="submit"] {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 30px;
+  border-radius: 20px;
+  color: #FFF;
+  width: 100%;
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  margin-bottom: 20px;
+}
+
+#login form ~ p {
+  font-weight: 700;
+}
+
+#login form ~ p span {
+  color: var(--color-primary);
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
+#backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.712);
+  z-index: 200;
+  display: none;
+}
+
+#confirmation-modal {
+  background-color: #28333d;
+  position: fixed;
+  width: 400px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  z-index: 300;
+  display: none;
+}
+
+#confirmation-modal > img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+  cursor: pointer;
+}
+
+#confirmation-modal > h3 {
+  font-size: 22px;
+}
+

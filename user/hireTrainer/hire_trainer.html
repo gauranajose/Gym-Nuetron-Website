@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Neutron | Hire Trainer</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hire_trainer.css">
+  <script src="hire_trainer.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>hire trainer</h1>
+    <ul>
+      <li><a href="../memberProfile/member_profile.html">My Profile</a></li>
+      <li><a href="../editProfile/edit_profile.html">Edit Profile</a></li>
+      <li><a href="../extendMembership/extnd._memb..html">Extend Membership</a></li>
+      <li><a href="#">Hire Trainer</a></li>
+    </ul>
+    <div id="sign-in-nav">
+      <div class="button" id="logout-btn"><a href="#">Logout</a></div>
+    </div>
+  </header>
+
+  <section id="select-trainer">
+    <form action="">
+      <div id="trainer-header">
+        <h2>Available Trainers</h2>
+        <p>Select the trainer you wish to hire.</p>
+        <input type="submit" value="Hire Trainer" class="button button-trans" id="hire-btn">
+      </div>
+      <div id="trainers">
+        <!-- <div class="trainer">
+          <img src="./images/trainer-profile.jpg"/>
+          <p class="italic">tn# 202001</p>
+          <p class="text-primary text-bold">Steven Smith</p>
+          <p class="text-bold"><span class="text-black">Schedule:</span> MWF</p>
+          <input type="radio" name="trainers" id="">
+          <div class="isSelected"></div>
+        </div> -->
+      </div>
+      <div class="loader">
+        <div class="container">
+          <div class="box1"></div>
+          <div class="box2"></div>
+          <div class="box3"></div>
+        </div>
+      </div>
+    </form>
+  </section>
+  <div id="backdrop"></div>
+  <div id="confirmation-modal">
+    <div class="loader">
+      <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+      </div>
+    </div>
+    <img src="../../images/icon-close.svg" alt="" id="close-btn">
+    <!-- <h3>Succesfully Hired Trainer!</h3> -->
+  </div>
+</body>
+</html>
