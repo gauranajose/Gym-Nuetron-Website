@@ -67,7 +67,7 @@ monthlyBtn.addEventListener('click', async () => {
   openModal();
   const data = {
     memberID: memberId,
-    membership: 'Weekly',
+    membership: 'Monthly',
   };
   const responseData = await sendHttpRequest(
     'POST',
@@ -86,7 +86,7 @@ annuallyBtn.addEventListener('click', async () => {
   openModal();
   const data = {
     memberID: memberId,
-    membership: 'Weekly',
+    membership: 'Annually',
   };
   const responseData = await sendHttpRequest(
     'POST',
